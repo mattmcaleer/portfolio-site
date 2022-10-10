@@ -1,38 +1,124 @@
 .App {
-  text-align: center;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  grid-template-rows: 120px 1fr 120px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-weight: 200;
+  cursor: default;
+  animation: text-load 3s;
+  list-style-type: none;
+  font-size: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes text-load {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  font-weight: bold;
+  color: black;
+  font-style: italic;
+  text-decoration: none;
+  margin-left: 0;
+  transition: margin-left 2s;
+}
+
+a:hover {
+  margin-left: 100px;
+
+  /* transition: color 1s;
+  color: rgba(0, 0, 0, 0.327);
+  cursor: default;
+  background-color: black;
   color: white;
+  cursor: default;
+  background: linear-gradient(to right, black 50%, transparent 0);
+  background-size: 200% 100%;
+  background-position: right;
+  animation: link-hover 1s 0s forwards; */
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes link-hover {
+  100% {
+    background-position: left;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-container {
+  right: 0;
+  position: relative;
+  animation: open-component 1s;
+
+  font-weight: bold;
+  text-align: justify;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: black;
+}
+
+@keyframes open-component {
+  0% { right: 1360px; }
+  100% { right: 0px; }
+}
+
+.title {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  text-align: right;
+  top: 80px;
+  text-shadow: -1px 1px wheat,
+               -2px 2px wheat,
+               -3px 3px wheat,
+               -4px 4px wheat   ;
+}
+
+h1 {
+  position: relative;
+  margin: 0;
+  animation: open-main-title 1.5s;
+  right: -60px;
+}
+
+@keyframes open-main-title {
+  0% { right: -860px; }
+  100% { right: -60px; }
+}
+
+.main-subheading {
+  position: relative;
+  animation: open-main-subheading 1.5s;
+  right: -60px;
+  top: 0;
+}
+
+@keyframes open-main-subheading {
+  0% { top: 620px; }
+  100% { top: -0; }
+}
+
+h2 {
+  margin: 0;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.back {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  transition: font-size 1s;
+}
+
+.back:hover {
+  margin-left: 0;
+  animation: none;
+  color: black;
+  font-size: 44px;
 }
