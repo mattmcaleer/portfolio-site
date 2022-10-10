@@ -17,7 +17,7 @@ function Home() {
         </li>
       </div>
       <div className="title">
-        <h1>Mattt McAleer</h1>
+        <h1>Matt McAleer</h1>
         <div className="main-subheading">Full-Stack Developer</div>
       </div>
     </>

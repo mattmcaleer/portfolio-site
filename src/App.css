@@ -29,13 +29,13 @@ a {
 
 a:hover {
   margin-left: 100px;
+  cursor: default;
 
   /* transition: color 1s;
   color: rgba(0, 0, 0, 0.327);
   cursor: default;
   background-color: black;
   color: white;
-  cursor: default;
   background: linear-gradient(to right, black 50%, transparent 0);
   background-size: 200% 100%;
   background-position: right;
@@ -118,6 +118,7 @@ h2 {
 
 .back:hover {
   margin-left: 0;
+  cursor: default;
   animation: none;
   color: black;
   font-size: 44px;
