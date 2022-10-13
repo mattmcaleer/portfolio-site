@@ -4,9 +4,17 @@ function Contact() {
   return (
   <div className="section-container">
     <Back/>
-    <li><a href="https://github.com/mattmcaleer" target="_blank">GitHub→</a></li>
-    <li><a href="https://www.linkedin.com/in/matthew-mcaleer/" target="_blank">LinkedIn→</a></li>
-    <li><a href="mailto:mattmcaleer3@gmail.com">Email→</a></li>
+    <div className="contact-links">
+    <li>
+      <a href="https://github.com/mattmcaleer" target="_blank" className="ext-link">GitHub</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/matthew-mcaleer/" target="_blank" className="ext-link">LinkedIn</a>
+    </li>
+    <li>
+      <a href="mailto:mattmcaleer3@gmail.com" className="ext-link">Email</a>
+    </li>
+    </div>
   </div>
   )
 }

@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 120px 1fr 120px;
   grid-template-rows: 120px 1fr 120px;
+  color: #0087ca;
 }
 
 body {
@@ -30,22 +31,6 @@ a {
 a:hover {
   margin-left: 100px;
   cursor: default;
-
-  /* transition: color 1s;
-  color: rgba(0, 0, 0, 0.327);
-  cursor: default;
-  background-color: black;
-  color: white;
-  background: linear-gradient(to right, black 50%, transparent 0);
-  background-size: 200% 100%;
-  background-position: right;
-  animation: link-hover 1s 0s forwards; */
-}
-
-@keyframes link-hover {
-  100% {
-    background-position: left;
-  }
 }
 
 .section-container {
@@ -72,10 +57,7 @@ a:hover {
   grid-row-start: 3;
   text-align: right;
   top: 80px;
-  text-shadow: -1px 1px wheat,
-               -2px 2px wheat,
-               -3px 3px wheat,
-               -4px 4px wheat   ;
+  font-style: italic;
 }
 
 h1 {
@@ -83,6 +65,7 @@ h1 {
   margin: 0;
   animation: open-main-title 1.5s;
   right: -60px;
+  /* text-shadow: -5px 5px black; */
 }
 
 @keyframes open-main-title {
@@ -103,23 +86,124 @@ h1 {
 }
 
 h2 {
-  margin: 0;
   text-align: left;
+  font-style: italic;
+  margin: 0;
   margin-bottom: 20px;
-  margin-top: 20px;
+  padding: 0;
+  padding-left: 4px;
+}
+
+p {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 200;
+  padding-bottom: 40px;
+}
+
+.bio-text {
+  padding: 0;
+  font-weight: 200;
 }
 
 .back {
-  margin: 0;
-  font-size: 32px;
-  font-weight: bold;
-  transition: font-size 1s;
+  position: fixed;
+  left: 80px;
+  top: 40%;
+  animation: back-load 1s;
 }
 
-.back:hover {
+@keyframes back-load {
+  0% { top: -200%; }
+  100% { top: 40%; }
+}
+
+.arrow-back {
+  font-size: 24px;
+  font-style: normal;
+  transition: font-size 1s;
+  display: inline-block;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.arrow-back:hover {
+  margin-left: 0;
   margin-left: 0;
   cursor: default;
   animation: none;
   color: black;
   font-size: 44px;
+}
+
+.arrow-diagonal {
+  font-style: normal;
+  display: inline-block;
+  font-size: 24px;
+  transform: rotate(-45deg)
+}
+
+.ext-link {
+  position: relative;
+  color: #0087ca;
+  font-size: 96px;
+}
+
+.ext-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.ext-link:hover {
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.ext-link:hover:after {
+  cursor: pointer;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.bio-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.bio-heading {
+  padding: 40px;
+  font-size: 48px;
+}
+
+.bio-image {
+  grid-column-start: 2;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.projects, .contact-links {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.project {
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+i {
+  font-size: 20px;
 }

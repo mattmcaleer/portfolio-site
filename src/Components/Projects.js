@@ -4,25 +4,57 @@ function Projects() {
   return (
     <div className="section-container">
       <Back/>
-      <div>
-        <h2>Itinerant</h2>
-        A web application that allows users to plan itineraries for upcoming trips and holidays. The frontend is written in React/Redux, while the backend is written in Ruby on Rails with a PostgreSQL database.
+      <div className="projects">
+      <div className="project">
+        <h2>
+          {/* <div className="arrow-diagonal">➔</div> */}
+          <a href="" className="ext-link" target="_blank">Itinerant</a>
+        </h2>
+        <p>
+          Plan your travel itineraries.<br/>
+          <i>Built with Ruby on Rails, React & PostgreSQL.</i>
+        </p>
       </div>
-      <div>
-        <h2>Trip Journal</h2>
-        A web application written using Ruby on Rails that allows users to keep a journal of trips and holidays. 
+      <div className="project">
+        <h2>
+          {/* <div className="arrow-diagonal">➔</div> */}
+          <a href="" className="ext-link" target="_blank">Trip Journal</a>
+        </h2>
+        <p>
+          Keep a holiday journal.<br/>
+          <i>Built with Ruby on Rails.</i>
+        </p>
       </div>
-      <div>
-        <h2>Astronomy Image Randomiser</h2>
-        A simple image randomiser web application written in plain JavaScript.
+      <div className="project">
+        <h2>
+          {/* <div className="arrow-diagonal">➔</div> */}
+          <a href="https://rubygems.org/gems/fender_guitar_catalogue" className="ext-link" target="_blank">Fender Guitar Catalogue</a>
+        </h2>
+        <p>
+          Browse Fender's guitar catalogue.<br/>
+          <i>Built with Ruby.</i>
+        </p>
       </div>
-      <div>
-        <h2>Bundesliga Fixtures & Results</h2>
-        A simple web application written using React for viewing match results and details in the Bundesliga (the German national football league).
+      <div className="project">
+        <h2>
+          {/* <div className="arrow-diagonal">➔</div> */}
+          <a href="https://mattmcaleer.github.io/astronomy-image-randomiser/" className="ext-link" target="_blank">Astronomy Image Randomiser</a>
+        </h2>
+        <p>
+          View random astronomy images.<br/>
+          <i>Built with JavaScript.</i>
+        </p>
       </div>
-      <div>
-        <h2>Fender Guitar Catalogue</h2>
-        A simple CLI application written in Ruby using data scraped from the Fender musical instruments website.
+      <div className="project">
+        <h2>
+          {/* <div className="arrow-diagonal">➔</div> */}
+          <a href="https://bundesliga-fixtures-results.herokuapp.com/" className="ext-link" target="_blank">Bundesliga Fixtures & Results</a>
+        </h2>
+        <p>
+          View past and future Bundesliga results and fixtures.<br/>
+          <i>Built with React.</i>
+        </p>
+      </div>
       </div>
     </div>
   )
