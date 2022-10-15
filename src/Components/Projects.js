@@ -7,18 +7,7 @@ function Projects() {
       <div className="projects">
       <div className="project">
         <h2>
-          {/* <div className="arrow-diagonal">➔</div> */}
-          <a href="" className="ext-link" target="_blank">Itinerant</a>
-        </h2>
-        <p>
-          Plan your travel itineraries.<br/>
-          <i>Built with Ruby on Rails, React & PostgreSQL.</i>
-        </p>
-      </div>
-      <div className="project">
-        <h2>
-          {/* <div className="arrow-diagonal">➔</div> */}
-          <a href="" className="ext-link" target="_blank">Trip Journal</a>
+          <a href="https://github.com/mattmcaleer/trip-journal" className="ext-link" target="_blank" rel="noreferrer">Trip Journal</a>
         </h2>
         <p>
           Keep a holiday journal.<br/>
@@ -27,8 +16,16 @@ function Projects() {
       </div>
       <div className="project">
         <h2>
-          {/* <div className="arrow-diagonal">➔</div> */}
-          <a href="https://rubygems.org/gems/fender_guitar_catalogue" className="ext-link" target="_blank">Fender Guitar Catalogue</a>
+          Itinerant <i>(<a href="https://github.com/mattmcaleer/itinerant-frontend" className="inline-ext-link" target="_blank" rel="noreferrer">Frontend code</a>/<a href="https://github.com/mattmcaleer/itinerant-backend" className="inline-ext-link" target="_blank" rel="noreferrer">Backend code</a>)</i>
+        </h2>
+        <p>
+          Plan your travel itineraries.<br/>
+          <i>Built with Ruby on Rails, React & PostgreSQL.</i>
+        </p>
+      </div>
+      <div className="project">
+        <h2>
+          <a href="https://rubygems.org/gems/fender_guitar_catalogue" className="ext-link" target="_blank" rel="noreferrer">Fender Guitar Catalogue</a>
         </h2>
         <p>
           Browse Fender's guitar catalogue.<br/>
@@ -37,8 +34,7 @@ function Projects() {
       </div>
       <div className="project">
         <h2>
-          {/* <div className="arrow-diagonal">➔</div> */}
-          <a href="https://mattmcaleer.github.io/astronomy-image-randomiser/" className="ext-link" target="_blank">Astronomy Image Randomiser</a>
+          <a href="https://mattmcaleer.github.io/astronomy-image-randomiser/" className="ext-link" target="_blank" rel="noreferrer">Astronomy Image Randomiser</a>
         </h2>
         <p>
           View random astronomy images.<br/>
@@ -47,8 +43,7 @@ function Projects() {
       </div>
       <div className="project">
         <h2>
-          {/* <div className="arrow-diagonal">➔</div> */}
-          <a href="https://bundesliga-fixtures-results.herokuapp.com/" className="ext-link" target="_blank">Bundesliga Fixtures & Results</a>
+          <a href="https://bundesliga-fixtures-results.herokuapp.com/" className="ext-link" target="_blank" rel="noreferrer">Bundesliga Fixtures & Results</a>
         </h2>
         <p>
           View past and future Bundesliga results and fixtures.<br/>

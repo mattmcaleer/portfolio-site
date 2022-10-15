@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 function Home() {
 
   return (
     <>
-      <div className="section-container">
+      <div className="home-container">
         <li>
           <Link to='about' className="section-link">ABOUT</Link>
         </li>
@@ -18,7 +17,7 @@ function Home() {
       </div>
       <div className="title">
         <h1>Matt McAleer</h1>
-        <div className="main-subheading">Full-Stack Developer</div>
+        <div className="main-subheading">Software Developer</div>
       </div>
     </>
   )

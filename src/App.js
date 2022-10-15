@@ -3,8 +3,6 @@ import Contact from './Components/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Projects from './Components/Projects';
 import About from './Components/About';
-import githubLogo from './Images/GitHub-Mark-64px.png'
-import linkedinLogo from './Images/LI-In-Bug.png'
 import Home from './Components/Home';
 
 function App() {
