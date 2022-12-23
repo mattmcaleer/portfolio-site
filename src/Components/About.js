@@ -19,8 +19,10 @@ function About() {
               <li>HTML/CSS</li>
               <li>PostgreSQL</li>
               <li>Git</li>
+              <li>NodeJs</li>
+              <li>ExpressJS</li>
             </ul>
-            <h2>Please feel free to drop me an <a href="mailto:mattmcaleer3@gmail.com" className="inline-ext-link">email</a> for any enquiries!</h2>
+            <h2 className="bio-footer">Please feel free to drop me an <a href="mailto:mattmcaleer3@gmail.com" className="inline-ext-link">email</a> for any enquiries!</h2>
         </p>
       </div>
     </div>

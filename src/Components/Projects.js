@@ -1,17 +1,28 @@
 import Back from "./Back";
+import React, { useEffect } from 'react';
 
 function Projects() {
   return (
+    <>
+    <Back/>
     <div className="section-container">
-      <Back/>
       <div className="projects">
       <div className="project">
         <h2>
-          <a href="https://github.com/mattmcaleer/trip-journal" className="ext-link" target="_blank" rel="noreferrer">Trip Journal</a>
+          <a href="https://trip-journal.herokuapp.com" className="ext-link" target="_blank" rel="noreferrer">Trip Journal</a>
         </h2>
         <p>
           Keep a holiday journal.<br/>
-          <i>Built with Ruby on Rails.</i>
+          <i>Built with Ruby on Rails & PostgreSQL.</i>
+        </p>
+      </div>
+      <div className="project">
+        <h2>
+          <a href="https://mattmcaleer.github.io/tasker/" className="ext-link" target="_blank" rel="noreferrer">Tasker</a>
+        </h2>
+        <p>
+            Because the world needed another task management app.<br/>
+          <i>Built with React.</i>
         </p>
       </div>
       <div className="project">
@@ -46,12 +57,13 @@ function Projects() {
           <a href="https://bundesliga-fixtures-results.herokuapp.com/" className="ext-link" target="_blank" rel="noreferrer">Bundesliga Fixtures & Results</a>
         </h2>
         <p>
-          View past and future Bundesliga results and fixtures.<br/>
+          Explore past and future Bundesliga results and fixtures.<br/>
           <i>Built with React.</i>
         </p>
       </div>
       </div>
     </div>
+    </>
   )
 }
 

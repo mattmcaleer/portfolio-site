@@ -3,11 +3,10 @@
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   grid-template-rows: 120px 1fr 120px;
-  color: #0087ca;
+  color: #12ac7b;
 }
 
 body {
-  font-weight: 200;
   cursor: default;
   animation: text-load 3s;
   list-style-type: none;
@@ -20,7 +19,6 @@ body {
 }
 
 a {
-  font-size: 64px;
   font-weight: bold;
   color: black;
   font-style: italic;
@@ -36,7 +34,7 @@ a:hover {
 
 .ext-link {
   position: relative;
-  color: #0087ca;
+  color: #12ac7b;
   font-size: 96px;
 }
 
@@ -48,7 +46,7 @@ a:hover {
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color: #0087ca;
+  background-color: #12ac7b;
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
@@ -67,7 +65,7 @@ a:hover {
 .inline-ext-link {
   font-size: inherit;
   position: relative;
-  color: #0087ca;
+  color: #12ac7b;
 }
 
 .inline-ext-link:after {
@@ -185,7 +183,7 @@ p {
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
-  padding-top: 60px;
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -200,7 +198,6 @@ p {
 }
 
 .bio-text {
-  padding: 80px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -208,15 +205,15 @@ p {
   text-align: left;
 }
 
-ul {
-  padding-bottom: 80px;
+.bio-footer {
+    padding-top: 20px;
 }
 
 .back {
-  position: fixed;
-  left: 60px;
-  top: 40%;
-  animation: back-load 1s;
+    position: fixed;
+    left: 60px;
+    top: 40%;
+    animation: back-load 1s;
 }
 
 @keyframes back-load {
@@ -225,15 +222,11 @@ ul {
 }
 
 .arrow-back {
-  font-size: 24px;
-  font-style: normal;
-  transition: font-size 0.5s;
-  display: inline-block;
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
+    font-size: 24px;
+    font-style: normal;
+    transition: font-size 0.5s;
+    display: inline-block;
+    transform: scale(-1, 1);
 }
 
 .arrow-back:hover {
@@ -252,6 +245,7 @@ ul {
 
 .project {
   position: relative;
+  padding-left: 5px;
   top: 0;
   overflow: hidden;
   transition: height 1s;
@@ -259,4 +253,10 @@ ul {
 
 i {
   font-size: 20px;
+}
+
+.test {
+    position: fixed;
+    top: 20%;
+    left: 30%;
 }
