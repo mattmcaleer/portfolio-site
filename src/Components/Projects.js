@@ -27,7 +27,7 @@ function Projects() {
       </div>
       <div className="project">
         <h2>
-          Itinerant <i>(<a href="https://github.com/mattmcaleer/itinerant-frontend" className="inline-ext-link" target="_blank" rel="noreferrer">Frontend code</a>/<a href="https://github.com/mattmcaleer/itinerant-backend" className="inline-ext-link" target="_blank" rel="noreferrer">Backend code</a>)</i>
+          Itinerant <i>(Under Maintenance)</i>
         </h2>
         <p>
           Plan your travel itineraries.<br/>
