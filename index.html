@@ -8,20 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./src/styles.css">
+    <link rel="icon" href="./src/Icons/favicon.png">
   </head>
   <body>
 
-
+    <div id="home" style="height: 0;"></div>
     <div id="top-banner">
-      <h1 id="top-banner-heading" class="reveal">M MCALEER</h1>
-      <div id="top-banner-links" class="reveal">
-        <a class="top-banner-link" href="#about">ABOUT</a>
-        <a class="top-banner-link" href="#projects">PROJECTS</a>
+      <div id="top-banner-content">
+        <h1 id="top-banner-heading">M MCALEER</h1>
+        <div id="top-banner-links">
+          <a class="top-banner-link" href="#about">ABOUT</a>
+          <a class="top-banner-link" href="#projects">PROJECTS</a>
+          <a class="top-banner-link" href="mailto:mattmcaleer3@gmail.com">CONTACT</a>
+        </div>
       </div>
     </div>
 
     <nav class="navigation">
-      <div class="menu-toggle-container reveal">
+      <div class="menu-toggle-container" style="margin:20px">
         <table class="toggle-psuedo-table">
           <tbody>
             <tr>
@@ -50,22 +54,30 @@
 
     <section>
       <div id="about">
-        <h1 class="reveal">ABOUT</h1>
-        <h2 class="reveal">I'm Matt, a full-stack software developer.</h2>
+        <h1 class="section-heading reveal">ABOUT</h1>
+        <h2 class="reveal">Welcome.</h2>
         <p class="reveal">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          I'm Matt, a full-stack developer based in Melbourne.
         </p>
         <p class="reveal">
-          Cras ultrices, metus a ullamcorper cursus, magna odio viverra ligula, blandit facilisis dui arcu sed orci. Suspendisse a pharetra magna. Phasellus mattis iaculis ante, sed volutpat elit accumsan non. Suspendisse convallis tempus tempus. Vestibulum tempus, est vel sollicitudin scelerisque, justo est sollicitudin leo, ut ultrices sapien tellus vitae augue. Mauris sed scelerisque lacus. Sed eu justo eget dolor tempus pulvinar sed id felis. Fusce gravida magna ut volutpat finibus.
+          I value simplicity, functionality, clean code ...
+          Formerly a supply chain professional, my interest in
         </p>
-      </div>
+        <p class="reveal">
+          I've worked with a variety of technologies in my projects, including React, JavaScript, Ruby, Ruby on Rails and PostgreSQL.
+        </p>
+        <p class="reveal">
+          Please don't hesitate to <a href="mailto:mattmcaleer3@gmail.com">let me know</a> if you have any enquiries.
+        </p>
+      <!-- </div> -->
     </section>
     
     <!-- Projects -->
     <section>
-      <div id="projects">  
-        <h1 class="reveal">PROJECTS</h1>
-          <!--
+      <div id="projects">
+        <h1 id="projects-heading" class="section-heading reveal">PROJECTS</h1>
+
+                <!--
             <div class="project">
               <a href="https://trip-journal.herokuapp.com" target="_blank" rel="noreferrer">Trip Journal</a>
               <p>
@@ -76,13 +88,33 @@
                 </i>
               </p>
             </div> -->
-
-            <div class="project reveal" id="tasker">
-              <img class="project-image" src="./src/Images/Tasker-Screenshot.png"/>
-              <!-- <h3 class="project-title">Tasker</h3>
-              <p>Because the world needed another task management app.</p>
-              <p>Tech Used: React</p> -->
-            </div>
+            <div id="project-list">
+              <div class="project reveal" id="tasker">
+                <div class="project-text">
+                  <h3>TASKER</h3><br/>
+                  <img class="project-image" src="./src/Images/Tasker-Screenshot.png"/><br/>
+                  <p>Because the world needed another task management app. Built with React.</p><br/>
+                  <a href="https://mattmcaleer.github.io/tasker/" target="_blank" class="project-link">VISIT</a><br/>
+                </div>
+                <div class="menu-toggle-container">
+                  <table class="toggle-psuedo-table">
+                    <tbody>
+                      <tr>
+                        <td class="toggle-pseudo-cell-outer"/>
+                        <td class="toggle-pseudo-cell-inner-left"/>
+                        <td class="toggle-pseudo-cell-inner-right"/>
+                        <td class="toggle-pseudo-cell-outer"/>
+                      </tr>
+                      <tr>
+                        <td class="toggle-pseudo-cell-outer"/>
+                        <td class="toggle-pseudo-cell-inner-left"/>
+                        <td class="toggle-pseudo-cell-inner-right"/>
+                        <td class="toggle-pseudo-cell-outer"/>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
           <!--
             <div class="project reveal">
               <div class="project-text">
@@ -100,39 +132,99 @@
             </div> -->
 
             <div class="project reveal" id="fender-guitar-catalogue">
-              <img class="project-image" src="./src/Images/Fender-Guitar-Catalogue-Screenshot.png"/>
-              <!-- <h3 class="project-title">Fender Guitar Catalogue</h3>
-              <p>Browse Fender's guitar catalogue.</p>
-              <p>Tech Used: Ruby</p> -->
+              <div class="project-text">
+                <h3>FENDER GUITAR CATALOGUE</h3><br/>
+                <img class="project-image" src="./src/Images/Fender-Guitar-Catalogue-Screenshot.png"/><br/>
+                <p>Browse Fender's guitar catalogue. Built with Ruby.</p><br/>
+                <a href="https://rubygems.org/gems/fender_guitar_catalogue" target="_blank" class="project-link">Download the Ruby Gem</a><br/>
+              </div>
+              <div class="menu-toggle-container">
+                <table class="toggle-psuedo-table">
+                  <tbody>
+                    <tr>
+                      <td class="toggle-pseudo-cell-outer"/>
+                      <td class="toggle-pseudo-cell-inner-left"/>
+                      <td class="toggle-pseudo-cell-inner-right"/>
+                      <td class="toggle-pseudo-cell-outer"/>
+                    </tr>
+                    <tr>
+                      <td class="toggle-pseudo-cell-outer"/>
+                      <td class="toggle-pseudo-cell-inner-left"/>
+                      <td class="toggle-pseudo-cell-inner-right"/>
+                      <td class="toggle-pseudo-cell-outer"/>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="project reveal" id="bundesliga-fixtures-and-results">
-              <img class="project-image" src="./src/Images/Bundesliga-Fixtures-And-Results-Screenshot.png"/>
-                <!-- <h3 class="project-title">Bundesliga Fixtures and Results</h3>
-                <p>Explore past and future Bundesliga results and fixtures.</p>
-                <i>Tech Used:
-                  <li>React</li>
-                </i> -->
-            </div>
+
             <div class="project reveal" id="astronomy-image-randomiser">
-              <img class="project-image" src="./src/Images/Astronomy-Image-Randomiser-Screenshot.png"/>
-              <!-- <h3 class="project-title">Astronomy Image Randomiser</h3>
-              <p>View random astronomy images.</p>
-              <i>Tech Used:
-                <li>JavaScript</li>
-              </i> -->
+              <div class="project-text">
+                <h3 class="project-title">ASTRONOMY IMAGE RANDOMISER</h3><br/>
+                <img class="project-image" src="./src/Images/Astronomy-Image-Randomiser-Screenshot.png"/><br/>
+                <p>View random astronomy images. Built with vanilla JavaScript and <object><a href="https://data.nasa.gov/Space-Science/Astronomy-Picture-of-the-Day-API/ez2w-t8ua">NASA's Astronomy Picture of the Day API.</a></object></p><br/>
+                <a href="https://mattmcaleer.github.io/astronomy-image-randomiser" target="_blank" class="project-link">VISIT</a>
+              </div>
+              <div class="menu-toggle-container">
+                <table class="toggle-psuedo-table">
+                  <tbody>
+                    <tr>
+                      <td class="toggle-pseudo-cell-outer"/>
+                      <td class="toggle-pseudo-cell-inner-left"/>
+                      <td class="toggle-pseudo-cell-inner-right"/>
+                      <td class="toggle-pseudo-cell-outer"/>
+                    </tr>
+                    <tr>
+                      <td class="toggle-pseudo-cell-outer"/>
+                      <td class="toggle-pseudo-cell-inner-left"/>
+                      <td class="toggle-pseudo-cell-inner-right"/>
+                      <td class="toggle-pseudo-cell-outer"/>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+            
+            <div class="project reveal" id="bundesliga-fixtures-and-results">
+              <div class="project-text">
+                <h3 class="project-title">BUNDESLIGA FIXTURES AND RESULTS</h3><br/>
+                <img class="project-image" src="./src/Images/Bundesliga-Fixtures-And-Results-Screenshot.png"/><br/>
+                <p>Explore past and future Bundesliga results and fixtures. Built with React and the <object><a href="https://www.openligadb.de/">OpenLigaDB API.</a></object></p><br/>
+                <a href="https://mattmcaleer.github.io/bundesliga-fixtures-and-results/" target="_blank" class="project-link">VISIT</a>
+              </div>
+              <div class="menu-toggle-container">
+                <table class="toggle-psuedo-table">
+                  <tbody>
+                    <tr>
+                      <td class="toggle-pseudo-cell-outer"/>
+                      <td class="toggle-pseudo-cell-inner-left"/>
+                      <td class="toggle-pseudo-cell-inner-right"/>
+                      <td class="toggle-pseudo-cell-outer"/>
+                    </tr>
+                    <tr>
+                      <td class="toggle-pseudo-cell-outer"/>
+                      <td class="toggle-pseudo-cell-inner-left"/>
+                      <td class="toggle-pseudo-cell-inner-right"/>
+                      <td class="toggle-pseudo-cell-outer"/>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <div class="top-footer"></div>
     <div class="footer">
-      <div class="footer-left">
+      <div class="footer-text">
         <a href="https://github.com/mattmcaleer" target="_blank"><img class="footer-logo" src="./src/Icons/github-logo.svg" /></a>
-        <a href="https://www.linkedin.com/in/matthew-mcaleer/" target="_blank"><img class="footer-logo" src="./src/Icons/linkedin-logo.png" /></a>
-      </div>
-      <div class="footer-right">
-        © 2023 <a class="footer-link" href="mailto:mattmcaleer3@gmail.com">M MCALEER</a>
+        <a href="https://www.linkedin.com/in/matthew-mcaleer/" target="_blank"><img class="footer-logo" style="margin-left:12px" src="./src/Icons/linkedin-logo.png" /></a><br/>
+        © 2023 <a class="footer-link" href="mailto:mattmcaleer3@gmail.com" style="margin-top:6px">M MCALEER</a><br/>
+        <a class="footer-link" href="#home" style="margin-top:6px">BACK TO TOP</a><br/>
       </div>
     </div>
     <script src="./src/index.js"></script>

@@ -9,14 +9,12 @@ function toggleMenu() {
   hideMenu = !hideMenu;
 
   if (hideMenu) {
-    menuToggle.style.opacity = '.3'
     menuToggle.style.transform = 'rotate(0deg)';
-    menuToggle.style.transition = 'transform 1s ease-out, opacity 1s';
+    menuToggle.style.transition = 'transform 1s ease-out';
     setTimeout('menu.style.height = 0;', 300)
   } else {
-    menuToggle.style.opacity = '1'
     menuToggle.style.transform = 'rotate(405deg)';
-    menuToggle.style.transition = 'transform 1s ease-out, opacity 1s';
+    menuToggle.style.transition = 'transform 1s ease-out';
     menu.style.height = '100vh'
   };
 }
@@ -26,13 +24,30 @@ menuToggle.addEventListener('click', toggleMenu)
 // make function that closes navbar (if its open) when page scrolled
 
 let pos1 = window.scrollY;
-let sticky = navbar.offsetTop;
+let stickyNav = navbar.offsetTop;
+let projects = document.querySelector("#project-list");
+let projectsHeading = document.querySelector("#projects-heading");
+let stickyHeading = projects.offsetTop;
+let footer = document.querySelector(".footer");
 
 window.onscroll = function() {
-  if (window.pageYOffset >= sticky) {
+  if (window.pageYOffset >= stickyNav) {
     navbar.classList.add("sticky-navbar")
   } else {
     navbar.classList.remove("sticky-navbar");
+  }
+
+  if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 12) {
+    footer.style.opacity = 1
+    footer.style.transition = 'opacity 300ms'
+    navbar.style.opacity = 0
+  } else if (window.pageYOffset <= stickyNav) {
+    navbar.style.opacity = 0
+    navbar.style.transition = 'opacity 300ms'
+  } else {
+    footer.style.opacity = 0
+    navbar.style.opacity = 1
+    navbar.style.transition = 'opacity 300ms'
   }
 
   let pos2 = window.scrollY;
@@ -42,9 +57,8 @@ window.onscroll = function() {
   } else {
     hideMenu = true;
     menu.classList = "nav-menu";
-    menuToggle.style.opacity = '.3'
     menuToggle.style.transform = 'rotate(0deg)';
-    menuToggle.style.transition = 'transform 1s ease-out, opacity 1s';
+    menuToggle.style.transition = 'transform 1s ease-out';
     setTimeout('menu.style.height = 0;', 300)
   }
 }
@@ -66,3 +80,45 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+const allProjects = document.querySelectorAll(".project");
+let projectOpen;
+
+const toggleProject = (p) => {
+  arrow = document.querySelector('.arrow')
+  toggle = p.querySelector('.menu-toggle-container table')
+
+  if (projectOpen) {
+    p.style.transition = 'width 250ms, margin-left 250ms, height 250ms'
+    p.style.height = '50px';
+    
+
+    setTimeout(() => p.style.width = '50%', 250)
+    setTimeout(() => p.style.marginLeft = '25%', 250)
+    setTimeout(() => p.style.transition = null, 1000)
+    
+
+    toggle.style.transform = 'rotate(0deg)'
+
+    p.classList.remove('active-project')
+
+  } else {
+
+    p.style.width = '100%'
+    p.style.marginLeft = '0'
+
+    toggle.style.transition = 'transform 250ms'
+
+    setTimeout(() => toggle.style.transform = 'rotate(225deg)', 250)
+
+    setTimeout(() => p.style.height = '390px', 250)
+
+    p.classList.add('active-project')
+  }
+
+  projectOpen = !projectOpen;
+}
+
+allProjects.forEach(e => e.addEventListener('click', () => toggleProject(e)))
+
+

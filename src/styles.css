@@ -1,11 +1,16 @@
 html, body {
-  background-color: black;
+  /* background-color: white; */
+  background-image: url(./Images/photo-1551036746-04a04d0aaa22.avif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   font-weight: 200;
   line-height: 14px;
   color: rgb(36, 36, 36);
   cursor: default;
   opacity: 100%;
   margin: 0;
+  font-weight: 600;
   scroll-behavior: smooth;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
@@ -25,10 +30,10 @@ html, body {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 0;
+  /* height: 0; */
   overflow: hidden;
   animation: hide-nav-menu 400ms;
-  z-index: -1;
+  z-index: -100;
   opacity: 0;
 }
 
@@ -72,10 +77,9 @@ html, body {
   text-align: center;
   z-index: 2;
   width: 100%;
-  background-color: none;
   position: absolute;
-  opacity: 0;
-  transition: opacity 1s;
+  /* display: none; */
+  opacity: 0%;
 }
 
 .sticky-navbar {
@@ -83,7 +87,7 @@ html, body {
   top: 0;
   width: 100%;
   background-color: none;
-  opacity: 100;
+  opacity: 100%;
 }
 
 .nav-link {
@@ -93,6 +97,7 @@ html, body {
   display: inline-block;
   opacity: 100;
   transition: color 200ms;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -106,13 +111,17 @@ body.preload * {
 
 table {
   position: relative;
-  top: 6px;
   border-collapse: collapse;
   border-style: hidden;
   width: 35px;
   height: 23px;
-  margin: 20px;
+  margin: 14px;
 }
+
+table:hover {
+  opacity: 50%;
+}
+
 
 td {
   border: 3px solid black;
@@ -141,127 +150,126 @@ td {
 }
 
 .footer {
-  font-size: 16px;
-  height: 48px;
-  line-height: 48px;
-  padding: 32px;
+  background-color: rgba(123, 123, 123, 0.409);
+  padding-top: 24px;
+  padding-bottom: 24px;
   bottom: 0;
   width: 100%;
   color: white;
+  /* background-color: rgb(225, 224, 224); */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  position: fixed;
-  z-index: 0;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.top-footer {
-  height: 120px;
-  z-index: 0;
+.footer-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .footer-link {
   color: white;
-  font-weight: normal;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .footer-link:hover {
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .footer-logo {
   filter: brightness(0) invert(1);
-  height: 36px;
-  margin-right: 12px;
-  padding: 4px;
-  /* display: inline-block; */
-}
-
-.footer-left {
-  color:rgb(220, 220, 220);
-  position: relative;
-  grid-column-start: 1;
-  text-align: left;
-}
-
-.footer-right {
-  grid-column-start: 3;
-  text-align: right;
-  padding-right: 72px;
+  height: 20px;
 }
 
 a {
-  text-decoration: none;
-  font-weight: bold;
+  text-decoration: underline;
+  /* font-weight: bold; */
   color: black;
   opacity: 100%;
   transition: opacity 200ms, font-size 200ms;
 }
 
 a:hover {
-  font-weight: bold;
+  /* font-weight: bold; */
   opacity: 50%;
   cursor: pointer;
 }
 
-#projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 80px;
-  margin-bottom: 80px;
+#project-list {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  /* column-gap: 60px; */
+  /* width: 100%; */
+  padding-top: 60px;
 }
 
 .project {
-  height: 500px;
-  width: 800px;
-  border: 6px solid;
-  box-sizing: border-box;
-  /* background: url(./Icons/web-page-browser-window-svgrepo-com.svg) no-repeat center; */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  grid-column-start: 2;
-  grid-column-end: 3; 
+  position: relative;
+  height: 50px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(239, 237, 237);
 }
 
 .project-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  /* height: 431px;
-  width: 748px;
-  top: 59px;
-  left: 14px */
+  height: 240px;
 }
 
-/* .project:hover {
-  cursor: pointer;
-} */
-
-/* .project-content {
-  background-color: black;
-  position: relative;
-  color: white;
-  height: 300px;
-  width: 100%;
-  opacity: 0;
-  font-size: 0;
-  overflow: hidden;
-  transition: opacity 500ms, font-size 200ms;
+.project:nth-child(2n - 2) {
+  background-color: rgba(244, 244, 244, 0.885);
 }
 
-.project-content:hover {
-  opacity: 90%;
-  font-size: 20px;
-  overflow: hidden;
-  opacity: 100;
-  position: relative;
-  width: 100%;
+.project:hover {
+  background-color: lightgrey;
 }
 
 .project-text {
-  padding: 40px;
+  /* position: absolute; */
+  background-color: none;
+  margin: 10px;
+  opacity: 100%;
   text-align: center;
-} */
+  width: 100%;
+  font-size: 12px;
+  transition: opacity 200ms;
+}
+
+.project-text:hover {
+  opacity: 100%;
+}
+
+#projects-heading {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 2;
+}
+
+.project-link {
+  /* grid-column-start: 2;
+  grid-column-end: 3; */
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid black;
+  background-color: white;
+  position: relative;
+  padding: 12px;
+}
+
+.project-link:hover {
+  opacity: 100%;
+  padding: 24px;
+  background-color: gainsboro;
+}
 
 h1 {
   font-size: 12px;
@@ -272,10 +280,33 @@ h1 {
   margin: 0;
 }
 
+h1.reveal.active {
+  width: 100%;
+  animation: load-h1 1s;
+}
+
+@keyframes load-h1 {
+  0% {
+    width: 0;
+  } 
+
+  100% {
+    width: 100%;
+  }
+}
+
 h2 {
   font-size: 72px;
   font-weight: 200;
   line-height: 0.8;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  text-align: left;
 }
 
 .header-logo {
@@ -284,7 +315,6 @@ h2 {
 }
 
 #top-banner {
-  background-image: url(./Images/photo-1551036746-04a04d0aaa22.avif);
   /* background: -webkit-linear-gradient(271deg, rgb(202, 213, 231) 0%, rgb(227, 206, 211) 60%, rgb(172, 172, 208) 73%, rgb(114, 159, 200) 82%, rgb(138, 162, 190) 100%);
   background: -o-linear-gradient(271deg, rgb(202, 213, 231) 0%, rgb(227, 206, 211) 60%, rgb(172, 172, 208) 73%, rgb(114, 159, 200) 82%, rgb(138, 162, 190) 100%);
   background: -ms-linear-gradient(271deg, rgb(202, 213, 231) 0%, rgb(227, 206, 211) 60%, rgb(172, 172, 208) 73%, rgb(114, 159, 200) 82%, rgb(138, 162, 190) 100%);
@@ -292,16 +322,28 @@ h2 {
   background: linear-gradient(179deg, rgb(202, 213, 231) 0%, rgb(227, 206, 211) 60%, rgb(172, 172, 208) 73%, rgb(114, 159, 200) 82%, rgb(138, 162, 190) 100%); */
   height: 80vh;
   padding-top: 20%;
+  /* margin-bottom: 160px; */
   color: white;
   transition: padding-top 1s;
   position: relative;
   z-index: 1;
 }
 
+@media (max-width: 990px) {
+  /* #top-banner {
+    display: none;
+  } */
+  #top-banner-heading {
+    font-size: 12px;
+  }
+}
+
+
 #top-banner-heading {
   text-align: center;
   position: relative;
   font-size: 160px;
+  /* line-height: 160px; */
   margin-bottom: 140px;
   font-weight: 600;
   text-shadow: 1px 1px gray,
@@ -311,26 +353,43 @@ h2 {
   5px 5px gray,
   6px 6px gray,
   7px 7px gray;
+  animation: load-banner 1s;
+}
+
+@keyframes load-banner {
+  0% {
+    opacity: 0;
+    padding-top: 150px;
+  }
+
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
 }
 
 #top-banner-links {
+  display: grid;
+  grid-template: "a a a";
   width: 100%;
   text-align: center;
+  animation: load-banner 1s;
 }
 
 .top-banner-link {
   color: white;
   text-shadow: none;
-  font-size: 96px;
-  margin: 40px;
+  font-size: 64px;
+  text-decoration: none;
 }
 
 section {
-  padding: 160px;
+  padding: 120px;
   text-align: left;
   background-color: white;
   position: relative;
   z-index: 1;
+  margin-bottom: 100px;
 }
 
 .reveal {
@@ -344,3 +403,21 @@ section {
   transform: translateY(0);
   opacity: 1;
 }
+
+.sticky-projects-heading {
+  position: sticky;
+  top: 80px;
+  transition: width 250ms, font-size 500ms, color 500ms;
+}
+
+.section-heading {
+  border-bottom: 2px solid black;
+}
+
+.active-project {
+  transition-property: width, margin-left, height;
+  transition-duration: 250ms, 250ms, 250ms;
+  transition-delay: 0s, 0s, 0s; 
+}
+
+
