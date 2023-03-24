@@ -3,7 +3,7 @@ let navbar = document.querySelector(".navigation")
 let hideMenu = true;
 let menu = document.querySelector(".nav-menu");
 
-function toggleMenu() {
+const toggleMenu = () => {
   menu.classList.toggle("nav-menu-active");
 
   hideMenu = !hideMenu;
@@ -63,7 +63,7 @@ window.onscroll = function() {
   }
 }
 
-function reveal() {
+let reveal = () => {
   let reveals = document.querySelectorAll(".reveal");
 
   for (let i = 0; i < reveals.length; i++) {
@@ -84,19 +84,11 @@ window.addEventListener("scroll", reveal);
 const allProjects = document.querySelectorAll(".project");
 let projectOpen;
 
-const toggleProject = (p) => {
+let toggleProject = (p) => {
   arrow = document.querySelector('.arrow')
   toggle = p.querySelector('.menu-toggle-container table')
 
   if (projectOpen) {
-    p.style.transition = 'width 250ms, margin-left 250ms, height 250ms'
-    p.style.height = '50px';
-    
-
-    setTimeout(() => p.style.width = '50%', 250)
-    setTimeout(() => p.style.marginLeft = '25%', 250)
-    setTimeout(() => p.style.transition = null, 1000)
-    
 
     toggle.style.transform = 'rotate(0deg)'
 
@@ -104,21 +96,34 @@ const toggleProject = (p) => {
 
   } else {
 
-    p.style.width = '100%'
-    p.style.marginLeft = '0'
-
     toggle.style.transition = 'transform 250ms'
 
     setTimeout(() => toggle.style.transform = 'rotate(225deg)', 250)
-
-    setTimeout(() => p.style.height = '390px', 250)
 
     p.classList.add('active-project')
   }
 
   projectOpen = !projectOpen;
+
+  
+}
+
+const closeProjectsOnScroll = () => {
+  let pos2 = window.scrollY;
+  console.log(pos1)
+  console.log(pos2)
+  let toggle = document.querySelectorAll('.menu-toggle-container table')
+
+  if (pos1 + 252 > pos2) {
+    return;
+  } else {
+    allProjects.forEach(e => e.classList.remove('active-project'))
+    toggle.forEach(e => e.style.transform = 'rotate(0deg)');
+    toggle.forEach(e => e.style.transition = 'transform 1s ease-out');
+  }
 }
 
 allProjects.forEach(e => e.addEventListener('click', () => toggleProject(e)))
+window.addEventListener('scroll', closeProjectsOnScroll)
 
 
