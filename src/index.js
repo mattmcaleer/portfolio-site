@@ -85,7 +85,6 @@ const allProjects = document.querySelectorAll(".project");
 let projectOpen;
 
 let toggleProject = (p) => {
-  arrow = document.querySelector('.arrow')
   toggle = p.querySelector('.menu-toggle-container table')
 
   if (projectOpen) {
@@ -110,11 +109,10 @@ let toggleProject = (p) => {
 
 const closeProjectsOnScroll = () => {
   let pos2 = window.scrollY;
-  console.log(pos1)
-  console.log(pos2)
+
   let toggle = document.querySelectorAll('.menu-toggle-container table')
 
-  if (pos1 + 252 > pos2) {
+  if (pos1 > pos2) {
     return;
   } else {
     allProjects.forEach(e => e.classList.remove('active-project'))

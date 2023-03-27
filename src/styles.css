@@ -69,8 +69,10 @@ html, body {
 }
 
 .menu-toggle-container {
-  float: right;
+  /* float: right; */
   z-index: 1;
+  position: absolute;
+  right: 0;
 }
 
 .navigation {
@@ -151,6 +153,7 @@ td {
 
 .footer {
   background-color: rgba(123, 123, 123, 0.409);
+  margin-top: 200px;
   padding-top: 24px;
   padding-bottom: 24px;
   bottom: 0;
@@ -219,7 +222,7 @@ a:hover {
   display: flex;
   overflow: hidden;
   background-color: rgb(239, 237, 237);
-  animation: close-project 500ms;
+  animation: close-project 500ms ease;
 }
 
 @keyframes close-project {
@@ -246,7 +249,7 @@ a:hover {
   width: 100%;
   margin-left: 0;
   height: 390px;
-  animation: open-project 500ms;
+  animation: open-project 500ms ease;
 }
 
 @keyframes open-project {
@@ -376,15 +379,6 @@ h3 {
   z-index: 1;
 }
 
-@media (max-width: 990px) {
-  /* #top-banner {
-    display: none;
-  } */
-  #top-banner-heading {
-    font-size: 12px;
-  }
-}
-
 
 #top-banner-heading {
   text-align: center;
@@ -403,18 +397,6 @@ h3 {
   animation: load-banner 1s;
 }
 
-@keyframes load-banner {
-  0% {
-    opacity: 0;
-    padding-top: 150px;
-  }
-
-  100% {
-    opacity: 1;
-    padding-top: 0;
-  }
-}
-
 #top-banner-links {
   display: grid;
   grid-template: "a a a";
@@ -430,8 +412,20 @@ h3 {
   text-decoration: none;
 }
 
+@keyframes load-banner {
+  0% {
+    opacity: 0;
+    padding-top: 150px;
+  }
+
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
 section {
-  padding: 120px;
+  padding: 180px;
   text-align: left;
   background-color: white;
   position: relative;
@@ -461,6 +455,47 @@ section {
   border-bottom: 2px solid black;
 }
 
+@media only screen and (max-width: 900px) {
+  #top-banner {
+    height: 40px;
+    width: 100%;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(108, 108, 108);
+  }
+
+  #top-banner-heading {
+    display: none;
+  }
+
+  .top-banner-link {
+    font-size: 20px;
+  }
+
+  .menu-toggle-container {
+    display: none;
+  }
+
+  section {
+    padding: 80px;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+  /* .menu-toggle-container {
+    display: none;
+  } */
+
+
+  h3 {
+    font-size: 14px;
+  }
+}
 
 
 
